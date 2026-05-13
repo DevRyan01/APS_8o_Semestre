@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/scripts.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <img src="assets/img/recycle.svg" alt="Ícone de reciclagem">
+      <div>
+        <h1>Fale Conosco</h1>
+      </div>
+    </div>
+    <nav class="top-nav">
+      <a href="index.html">Início</a>
+      <a href="conteudo.html">Conteúdo</a>
+      <a href="contato.html">Contato</a>
+      <a href="sobre.html">Sobre o Grupo</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-form">
+      <h2>Formulário de Contato</h2>
+      <p>Preencha seus dados e envie sua mensagem.</p>
+      <form id="contactForm">
+        <label for="fullName">Nome completo</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Seu nome" required>
+
+        <label for="birthDate">Data de nascimento</label>
+        <input type="date" id="birthDate" name="birthDate" required>
+
+        <label for="phone">Telefone</label>
+        <input type="tel" id="phone" name="phone" placeholder="(99) 99999-9999" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+        <fieldset>
+          <legend>Sexo</legend>
+          <label><input type="radio" name="gender" value="feminino" required> Feminino</label>
+          <label><input type="radio" name="gender" value="masculino"> Masculino</label>
+          <label><input type="radio" name="gender" value="outro"> Outro</label>
+        </fieldset>
+
+        <label for="education">Escolaridade</label>
+        <select id="education" name="education" required>
+          <option value="">Selecione</option>
+          <option value="fundamental">Ensino Fundamental</option>
+          <option value="medio">Ensino Médio</option>
+          <option value="superior">Ensino Superior</option>
+          <option value="pos">Pós-graduação</option>
+        </select>
+
+        <label><input type="checkbox" id="newsletter" name="newsletter"> Quero receber novidades sobre reciclagem</label>
+
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="5" placeholder="Escreva sua mensagem..." onkeypress="showTypingHint()" required></textarea>
+
+        <button type="button" id="sendButton" onclick="submitForm()">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Contato disponível para dúvidas e sugestões.</p>
+  </footer>
+</body>
+</html>
