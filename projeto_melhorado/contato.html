@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — Reciclagem Consciente</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/scripts.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">
+      <img src="assets/img/recycle.svg" alt="Ícone de reciclagem">
+      <div>
+        <h1>Fale Conosco</h1>
+        <p>Sua mensagem é muito bem-vinda</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <nav>
+        <div class="top-nav">
+          <a href="index.html">Início</a>
+          <a href="conteudo.html">Conteúdo</a>
+          <a href="contato.html">Contato</a>
+          <a href="sobre.html">Sobre</a>
+        </div>
+      </nav>
+      <button class="btn-dark-mode" id="btnDarkMode" onclick="toggleDarkMode()" aria-label="Alternar modo escuro">
+        <span class="label">Modo Escuro</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="contact-form">
+      <h2>Formulário de Contato</h2>
+      <p>Preencha seus dados e envie sua mensagem. Ficamos felizes em receber dúvidas, sugestões e ideias sobre reciclagem!</p>
+
+      <form id="contactForm">
+        <label for="fullName">Nome completo</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Seu nome completo" required>
+
+        <label for="birthDate">Data de nascimento</label>
+        <input type="date" id="birthDate" name="birthDate" required>
+
+        <label for="phone">Telefone</label>
+        <input type="tel" id="phone" name="phone" placeholder="(99) 99999-9999" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+        <fieldset>
+          <legend>Sexo</legend>
+          <label><input type="radio" name="gender" value="feminino" required> Feminino</label>
+          <label><input type="radio" name="gender" value="masculino"> Masculino</label>
+          <label><input type="radio" name="gender" value="outro"> Outro</label>
+        </fieldset>
+
+        <label for="education">Escolaridade</label>
+        <select id="education" name="education" required>
+          <option value="">Selecione...</option>
+          <option value="fundamental">Ensino Fundamental</option>
+          <option value="medio">Ensino Médio</option>
+          <option value="superior">Ensino Superior</option>
+          <option value="pos">Pós-graduação</option>
+        </select>
+
+        <label>
+          <input type="checkbox" id="newsletter" name="newsletter">
+          Quero receber novidades sobre reciclagem
+        </label>
+
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="5" placeholder="Escreva sua mensagem aqui..." onkeypress="showTypingHint()" required></textarea>
+
+        <button type="button" id="sendButton" onclick="submitForm()">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Contato disponível para dúvidas e sugestões — APS 8º semestre</p>
+  </footer>
+
+</body>
+</html>
